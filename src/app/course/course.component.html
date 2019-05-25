@@ -1,0 +1,60 @@
+  <mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+<mat-table [dataSource]="dataSource.courseDetails">
+
+      <ng-container matColumnDef="Id">
+         <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell  *matCellDef="let element"> 
+     
+          {{element.Id}} 
+        </td >
+      </ng-container>
+      <ng-container matColumnDef="name">
+         <th mat-header-cell *matHeaderCellDef> name </th>
+        <td mat-cell  *matCellDef="let element"> 
+          
+          {{element.name}} 
+        </td >
+      </ng-container>
+      <ng-container matColumnDef="fees">
+         <th mat-header-cell *matHeaderCellDef> fees </th>
+        <td mat-cell  *matCellDef="let element"> 
+         
+          {{element.fees}} 
+        </td >
+      </ng-container>
+      <ng-container matColumnDef="duration">
+         <th mat-header-cell *matHeaderCellDef> duration </th>
+        <td mat-cell  *matCellDef="let element"> 
+        
+          {{element.duration}} 
+        </td >
+      </ng-container>
+          <ng-container matColumnDef="description">
+         <th mat-header-cell *matHeaderCellDef> description </th>
+        <td mat-cell  *matCellDef="let element"> 
+       
+          {{element.description}} 
+        </td >
+      </ng-container>
+     
+       <ng-container matColumnDef="imageUrl">
+         <th mat-header-cell *matHeaderCellDef> imageUrl </th>
+        <td mat-cell  *matCellDef="let element"> 
+         
+          {{element.imageUrl}} 
+        </td >
+      </ng-container>
+      <ng-container matColumnDef="videoUrl">
+         <th mat-header-cell *matHeaderCellDef> videoUrl </th>
+        <td mat-cell  *matCellDef="let element"> 
+          
+          {{element.videoUrl}} 
+        </td >
+      </ng-container>
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+<!--<mat-paginator [pageSizeOptions]="[5,10,20] showLastButton"></mat-paginator>-->
+</mat-table>
