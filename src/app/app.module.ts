@@ -21,7 +21,9 @@ import { CoursedailogComponent } from './coursedailog/coursedailog.component'
 import {ReactiveFormsModule} from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { DailogdemoComponent } from './dailogdemo/dailogdemo.component';
-import { WcteamComponent } from './wcteam/wcteam.component'
+import { WcteamComponent } from './wcteam/wcteam.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import { WcteamComponent } from './wcteam/wcteam.component'
     CoursedailogComponent,
     FormsComponent,
     DailogdemoComponent,
-    WcteamComponent
+    WcteamComponent,
+    ProductlistComponent,
+    ProductdetailsComponent
   ],
   entryComponents: [
     ShowdailogComponent
