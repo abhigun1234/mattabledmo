@@ -1,6 +1,6 @@
-  <mat-form-field>
+  <!-- <mat-form-field>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field>
+</mat-form-field> -->
 <mat-table [dataSource]="dataSource.courseDetails">
 
       <ng-container matColumnDef="Id">
@@ -53,6 +53,14 @@
           {{element.videoUrl}} 
         </td >
       </ng-container>
+      <ng-container matColumnDef="add">
+        <th mat-header-cell *matHeaderCellDef> </th>
+       <td mat-cell  *matCellDef="let element"> 
+         
+        <mat-icon (click)="addCourse()" >add_circle</mat-icon>
+       </td >
+     </ng-container>
+     
 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 

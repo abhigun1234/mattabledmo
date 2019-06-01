@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {CourseService} from '..//course.service'
 import {MatTableDataSource,MatInputModule ,MatPaginator} from '@angular/material'
 import {Course} from '..//course'
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ShowdailogComponent} from '..//showdailog/showdailog.component'
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
@@ -9,7 +11,8 @@ import {Course} from '..//course'
 })
 export class CourseComponent implements OnInit {
   dataSource;
-  displayedColumns: string[] = ['Id','name','fees','duration','description','imageUrl','videoUrl'];
+  dialogRef;
+  displayedColumns: string[] = ['Id','name','fees','duration','description','imageUrl','videoUrl','add'];
   courseData=[
  
           {
@@ -59,7 +62,9 @@ export class CourseComponent implements OnInit {
         }
 
 ]
-  constructor(private course :CourseService) { }
+  constructor(private course :CourseService,private dailog:MatDialog) { 
+
+  }
 applyFilter(filterValue: string) {
 
   }
@@ -77,5 +82,13 @@ applyFilter(filterValue: string) {
     })
   }
 
+  addCourse()
+  {
 
+    this.dialogRef= this.dailog.open(ShowdailogComponent ,{
+      height: '400px',
+      width: '600px',
+    });
+
+  }
 }

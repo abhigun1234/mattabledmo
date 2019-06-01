@@ -1,3 +1,4 @@
+import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -11,11 +12,32 @@ import {MatFormFieldModule  } from '@angular/material/form-field';
 import {MatInputModule ,MatPaginator} from '@angular/material';
 import { FlexboxComponent } from './flexbox/flexbox.component'
 import {MatIconModule} from '@angular/material/icon';
+import { BootstarapdemoComponent } from './bootstarapdemo/bootstarapdemo.component';
+import { DailogComponent } from './dailog/dailog.component';
+import { ShowdailogComponent } from './showdailog/showdailog.component';
+import {FormsModule} from '@angular/forms';
+import { MypopupComponent } from './mypopup/mypopup.component';
+import { CoursedailogComponent } from './coursedailog/coursedailog.component'
+import {ReactiveFormsModule} from '@angular/forms';
+import { FormsComponent } from './forms/forms.component';
+import { DailogdemoComponent } from './dailogdemo/dailogdemo.component';
+import { WcteamComponent } from './wcteam/wcteam.component'
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
-    FlexboxComponent
+    FlexboxComponent,
+    BootstarapdemoComponent,
+    DailogComponent,
+    ShowdailogComponent,
+    MypopupComponent,
+    CoursedailogComponent,
+    FormsComponent,
+    DailogdemoComponent,
+    WcteamComponent
+  ],
+  entryComponents: [
+    ShowdailogComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +48,10 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   
     
   ],

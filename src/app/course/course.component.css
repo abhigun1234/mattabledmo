@@ -8,8 +8,27 @@ table {
     width: 70px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: 10px
+    
   }
   .filter
   {
-      margin: 12px;
+      margin: 22px;
+  }
+  .mat-row {
+    height: auto;
+  }
+  
+  .mat-cell {
+    padding: 15px 15px 15px 0;
+  }
+  .mat-header-row
+  { font-size: 25px;
+    font-weight: bold;
+    color:brown;
+    background: lightgray;
+  }
+  .mat-icon
+  {
+    margin-top: 25px;
   }

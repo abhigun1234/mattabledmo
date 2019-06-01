@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <h1>Registration</h1>
+  <form #userForm="ngForm" (ngSubmit)="register(userForm.value)">
+    {{userForm.value | json}}
+    <div class="form-group">
+      <label>Name</label>
+      <input  type="text" class="form-control" name="name"  [(ngModel)]="name">
+
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input ngModel type="email" class="form-control" name="email">
+  
+    </div>
+    <div class="form-group">
+      <select  ngModel class="custum-select" name="country">
+        <option>Country</option>
+        <option  *ngFor="let c of countries">{{c}}</option>
+      </select>
+
+
+    </div>
+    <button class="btn btn-primary">Submit</button> 
+  </form>
+  
+</div>

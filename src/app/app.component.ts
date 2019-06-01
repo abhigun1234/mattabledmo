@@ -72,7 +72,7 @@ export class AppComponent  implements OnInit {
   // })
   }
 
-  displayedColumns: string[] = ['Id','name','duration'];
+  displayedColumns: string[] = ['Id','name','fees','duration','description','imageUrl','videoUrl'];
   
   title = 'datatable';
  
